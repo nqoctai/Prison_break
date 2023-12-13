@@ -1,18 +1,7 @@
 #include <bits./stdc++.h>
 
-void Input1(unsigned long long&n, unsigned long long&m, unsigned long long&r, unsigned long long&c)
-{
-	printf("Enter n: ");
-	scanf("%d", &n);
-	printf("Enter m: ");
-	scanf("%d", &m);
-	printf("Enter r: ");
-	scanf("%d", &r);
-	printf("Enter c: ");
-	scanf("%d", &c);
-}
 
-void Input2(unsigned long long& n, unsigned long long& m, unsigned long long& r, unsigned long long& c)
+void Input(unsigned long long& n, unsigned long long& m, unsigned long long& r, unsigned long long& c)
 {
 	scanf("%d %d %d %d", &n,&m,&r,&c);
 }
@@ -49,8 +38,7 @@ int main()
 
 	while (t--)
 	{
-		//Input1(n, m, r, c);
-		Input2(n, m, r, c);
+		Input(n, m, r, c);
 		printf("%d\n", Prison_Break(n, m, r, c));
 	}
 	return 0;
