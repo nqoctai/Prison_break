@@ -1,6 +1,4 @@
 #include <bits./stdc++.h>
-
-
 void Input(unsigned long long& n, unsigned long long& m, unsigned long long& r, unsigned long long& c)
 {
 	scanf("%d %d %d %d", &n,&m,&r,&c);
@@ -18,7 +16,7 @@ int max(int a, int b)
 	}
 }
 
-// khoáº£ng cÃ¡ch Manhattan |x1 - x2| + |y1 - y2|
+// Khoảng cách Manhattan |x1 - x2| + |y1 - y2|
 unsigned long long  Prison_Break(unsigned long long n, unsigned long long m, unsigned long long r, unsigned long long c)
 {
 	unsigned long long Max = 0;
