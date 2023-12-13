@@ -1,0 +1,57 @@
+#include <bits./stdc++.h>
+
+void Input1(unsigned long long&n, unsigned long long&m, unsigned long long&r, unsigned long long&c)
+{
+	printf("Enter n: ");
+	scanf("%d", &n);
+	printf("Enter m: ");
+	scanf("%d", &m);
+	printf("Enter r: ");
+	scanf("%d", &r);
+	printf("Enter c: ");
+	scanf("%d", &c);
+}
+
+void Input2(unsigned long long& n, unsigned long long& m, unsigned long long& r, unsigned long long& c)
+{
+	scanf("%d %d %d %d", &n,&m,&r,&c);
+}
+
+int max(int a, int b)
+{
+	if (a>b)
+	{
+		return a;
+	}
+	else
+	{
+		return b;
+	}
+}
+
+// khoáº£ng cÃ¡ch Manhattan |x1 - x2| + |y1 - y2|
+unsigned long long  Prison_Break(unsigned long long n, unsigned long long m, unsigned long long r, unsigned long long c)
+{
+	unsigned long long Max = 0;
+	Max = max(Max, abs(1-r) + abs(1-c));
+	Max = max(Max, abs(1-c) + abs(n-r));
+	Max = max(Max, abs(1-r) + abs(m-c));
+	Max = max(Max, abs(n-r) + abs(m-c));
+
+	return Max;
+}
+
+int main()
+{
+	unsigned long long t,n,m,r,c;
+	printf("Enter t: ");
+	scanf("%d", &t);
+
+	while (t--)
+	{
+		//Input1(n, m, r, c);
+		Input2(n, m, r, c);
+		printf("%d\n", Prison_Break(n, m, r, c));
+	}
+	return 0;
+}
